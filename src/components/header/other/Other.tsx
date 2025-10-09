@@ -3,7 +3,7 @@ import ThemeSwitcher from '../otherButtons/ThemeSwitcher'
 
 const Other:React.FC = () => {
   return (
-    <div className='flex'>
+    <div className='ml-auto mr-2'>
       <ThemeSwitcher />
     </div>
   )
