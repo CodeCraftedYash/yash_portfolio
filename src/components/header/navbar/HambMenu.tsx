@@ -12,7 +12,7 @@ const HambMenu: React.FC = () => {
   const menuRef: RefObject<HTMLUListElement|null> = useRef(null);
 
   const handleClick = () => {
-    if (flag && menuRef.current) {
+    if (flag && menuRef.current && view) {
       
       gsap.to(menuRef.current, {
         ...slideIn("right", 0.6),
@@ -56,7 +56,7 @@ const HambMenu: React.FC = () => {
         >
           {navItems.map((item, index) => (
             <a key={index} href="/">
-              <li className="flex flex-row-reverse flex-nowrap items-center justify-end">{item.name} <item.icon className="w-6 " /></li>
+              <li className="flex flex-row-reverse flex-nowrap items-center justify-end py-1" style={{fontSize:"var(--font-size-base)"}}>{item.name} <item.icon className="w-6 " /></li>
             </a>
           ))}
         </ul>
