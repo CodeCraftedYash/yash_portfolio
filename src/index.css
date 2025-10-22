@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@400..900&display=swap");
+@import "tailwindcss";
 
 :root {
   line-height: 1.5;
@@ -14,22 +15,24 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-background: #ffffff;
-  --color-surface: #ffe5d3;
+  --color-surface: #65a35c;
+  --color-highlight: #ffd52b;
   --color-accent: #e46212;
-  --color-text-primary: #161616;
-  --color-text-secondary: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #000000;
   --font-size-base: 16px;
-  --font-size-lg: 20px;
-  --font-size-md: 18px;
-  --font-size-sm: 14px;
-  --font-size-xs: 10px;
+  --font-size-lg: 1.25rem;
+  --font-size-md: 0.9rem;
+  --font-size-sm: 0.7rem;
+  --font-size-xs: 0.5rem;
+  --font-size-icon:1.5rem;
 }
 
 :root.dark {
-  --color-background: #ffffff;
+  --color-background: #383737;
   --color-surface: #ffe5d3;
   --color-accent: #e46212;
-  --color-text-primary: #161616;
+  --color-text-primary: rgb(0, 0, 0);
   --color-text-secondary: #ffffff;
 }
 
@@ -38,4 +41,12 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+}
+h2{
+  font-weight: 700;
+}
+@media ( max-width: 480px ) {
+  :root{
+    --font-size-base:16px;
+  }
 }
