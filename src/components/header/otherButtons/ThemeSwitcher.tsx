@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { MdSunny } from "react-icons/md";
-import { MdOutlineNightlight } from "react-icons/md";
+import { FaSun } from "react-icons/fa6";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
 const ThemeSwitcher: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,15 +18,15 @@ const ThemeSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="w-10 overflow-hidden aspect-square cursor-pointer flex items-center">
+    <div className="p-2 overflow-hidden aspect-square cursor-pointer flex items-center">
       {darkMode ? (
-        <MdOutlineNightlight
-          className="text-blue-600 hover:cursor-pointer hover:scale-110" style={{fontSize:"var(--icon-size)"}}
+        <BsFillMoonStarsFill
+          className="text-cyan-700 hover:cursor-pointer hover:scale-120 transition-all duration-150 ease-in-out" style={{fontSize:"var(--font-size-icon )"}}
           onClick={handleToggle}
         />
       ) : (
-        <MdSunny
-          className="text-yellow-500 hover:cursor-pointer hover:scale-110" style={{fontSize:"var(--icon-size)"}}
+        <FaSun
+          className="text-amber-500 hover:cursor-pointer hover:scale-120 transition-all duration-150 ease-in-out" style={{fontSize:"var(--font-size-icon )"}}
           onClick={handleToggle}
         />
       )}
