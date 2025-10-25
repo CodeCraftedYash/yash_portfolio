@@ -7,6 +7,7 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  font-size: var(--font-size-base);
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   font-synthesis: none;
@@ -15,25 +16,26 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-background: #ffffff;
-  --color-surface: #65a35c;
-  --color-highlight: #ffd52b;
+  --color-surface: #408a2c;
+  --color-highlight: #ffba5a;
   --color-accent: #e46212;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #000000;
+  --color-text-primary: #000000;
+  --color-text-secondary: #ffffff;
   --font-size-base: 16px;
+  --font-size-xl:1.8rem;
   --font-size-lg: 1.25rem;
   --font-size-md: 0.9rem;
-  --font-size-sm: 0.7rem;
+  --font-size-sm: 0.8rem;
   --font-size-xs: 0.5rem;
-  --font-size-icon:1.5rem;
+  --font-size-icon:1.3rem;
 }
 
 :root.dark {
   --color-background: #383737;
-  --color-surface: #ffe5d3;
+  --color-surface: rgb(226, 0, 143);
   --color-accent: #e46212;
-  --color-text-primary: rgb(0, 0, 0);
-  --color-text-secondary: #ffffff;
+  --color-text-primary: rgb(255, 255, 255);
+  --color-text-secondary: #000000;
 }
 
 h1 {
@@ -44,9 +46,23 @@ h1 {
 }
 h2{
   font-weight: 700;
+  font-size: var(--font-size-md);
+}
+h3{
+  font-size:var(--font-size-sm)
+}
+.outlined-text {
+   color: #ffffff;  
+  text-shadow:
+    -2.2px -2.2px 0 var(--color-highlight),
+     2.2px -2.2px 0 var(--color-highlight),
+    -2.2px  2.2px 0 var(--color-highlight),
+     2.2px  2.2px 0 var(--color-highlight);
+  font-weight: 800;
 }
 @media ( max-width: 480px ) {
   :root{
-    --font-size-base:16px;
+    --font-size-base:14px;
+    --font-size-xl:1.25rem
   }
 }
