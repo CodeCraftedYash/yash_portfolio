@@ -4,4 +4,5 @@ export interface socialMediaLinksType {
     name: string;
     url: string;
     icon: IconType;
+    col:string;
 }
