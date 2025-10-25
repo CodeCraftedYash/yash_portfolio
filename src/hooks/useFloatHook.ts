@@ -2,34 +2,38 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import type { RefObject } from "react";
 
-type Target = RefObject<HTMLElement | null> | RefObject<HTMLElement | null>[];
-
 export const useFloatHook = (
-  targets: Target,
-  duration: number = 0.5,
-  distance: number = 2
+  ref: RefObject<HTMLElement | null>,
+  duration: number = 0.8,
+  distance: number = 3
 ) => {
   useGSAP(() => {
-    const elements = Array.isArray(targets)
-      ? targets.map(ref => ref.current).filter(Boolean)
-      : [targets.current].filter(Boolean);
+    if (!ref.current) return;
 
-    if (!elements.length) return;
+    const target = ref.current;
+    const children = Array.from(target.children) as HTMLElement[];
 
-    const animate = (el: HTMLElement) => {
-      gsap.to(el, {
-        x: gsap.utils.random(-distance, distance),
-        y: gsap.utils.random(-distance, distance),
-        duration,
-        ease: "sine.inOut",
-        onComplete: () => animate(el),
-      });
+    const animateElement = (el: HTMLElement) => {
+      const animate = () => {
+        gsap.to(el, {
+          x: gsap.utils.random(-distance, distance),
+          y: gsap.utils.random(-distance, distance),
+          duration,
+          ease: "sine.inOut",
+          onComplete: animate,
+        });
+      };
+      animate();
     };
 
     const ctx = gsap.context(() => {
-      elements.forEach((el) => animate(el!));
-    });
+      if (children.length > 0) {
+        children.forEach((child) => animateElement(child));
+      } else {
+        animateElement(target);
+      }
+    }, ref);
 
     return () => ctx.revert();
-  }, [targets, duration, distance]);
+  }, [ref]);
 };
