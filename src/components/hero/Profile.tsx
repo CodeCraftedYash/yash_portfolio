@@ -17,8 +17,8 @@ const Profile: React.FC = () => {
         { scope: ShineRef }
     )
     return (
-        <div className='relative w-[50%] sm:w-[40%] md:w-[80%] lg:w-[50%] '>
-            <div className='relative rounded-[100%] overflow-hidden border-4'>
+        <div className='relative w-full'>
+            <div className='relative rounded-[100%] overflow-hidden border-4 border-[var(--color-text-secondary)]'>
                 <img src={myImage} alt="yash mishra" className='scale-105' />
                 <div ref={ShineRef} className='absolute w-full h-full bg-gradient-to-l from-transparent from-45% via-50% to-60% via-white/70 to-transparent top-0 z-10 -skew-x-12 mix-blend-overlay'></div>
             </div>
