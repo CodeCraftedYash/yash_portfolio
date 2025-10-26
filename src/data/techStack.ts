@@ -22,7 +22,7 @@ export const techStackData = [
   {
     name: "ReactJs",
     img: "https://logos-world.net/wp-content/uploads/2023/08/React-Logo-500x281.png",
-    color: "#61DBFB",
+    color: "#ffffff",
   },
   {
     name: "Typescript",
