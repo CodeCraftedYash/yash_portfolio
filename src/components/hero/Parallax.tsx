@@ -3,7 +3,7 @@ import { techStackData } from "../../data/techStack";
 
 const Parallax = () => {
   const icons = techStackData.map((item, index) => {
-    const random = gsap.utils.random(1.3, 1.5);
+    const random = gsap.utils.random(1.4, 1.7);
 
     return (
       <div key={index} className="border-2" data-speed={random}>
