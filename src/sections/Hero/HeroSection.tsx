@@ -25,8 +25,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-[60%] mx-auto h-[60vh] lg:h-[90vh] relative overflow-hidden"><Parallax /></div>
-      <div className="h-[40vh]"></div>
+      <div className="w-[60%] mx-auto h-[60vh] lg:h-[30vh] relative overflow-hidden"><Parallax /></div>
     </section>
   );
 };
