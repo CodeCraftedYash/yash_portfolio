@@ -1,8 +1,10 @@
-import React from 'react'
+import SvgHeader from "../../components/about/SvgHeader"
 
 const AboutSection = () => {
   return (
-    <div>AboutSection</div>
+    <div className="w-full ">
+      <SvgHeader />
+    </div>
   )
 }
 
