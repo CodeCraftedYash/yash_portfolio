@@ -1,0 +1,13 @@
+const StarSvg = ({type= 1}:{type:number}) => {
+    const star = [
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 84 70"><path fill="url(#a)" d="M39 2c1-3 4-3 6 0l14 18 2 1 20 10c3 2 3 6 0 7L61 49l-2 1-14 18c-2 2-5 2-6 0L24 50l-1-1L2 38c-3-1-3-5 0-7l21-10 1-1L39 2Z"/><defs><linearGradient id="a" x1="77.5" x2="6" y1="60.4" y2="8.4" gradientUnits="userSpaceOnUse"><stop offset=".1" stop-color="#FF9EF0"/><stop offset=".5" stop-color="#8400FF"/><stop offset=".9" stop-color="#21A6FF"/></linearGradient></defs></svg>,
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 62 57"><path fill="url(#a)" d="m31 0 1 21c0 2 3 4 6 3l23-10-20 11c-3 1-3 6 0 7l20 11-23-10c-3-1-6 1-6 3l-1 21-2-21c0-2-3-4-5-3L0 43l20-11c3-1 3-6 0-7L0 14l24 10c2 1 5-1 5-3l2-21Z"/><defs><linearGradient id="a" x1="58.2" x2="3.2" y1="48.4" y2="8.8" gradientUnits="userSpaceOnUse"><stop offset=".1" stop-color="#FF9EF0"/><stop offset=".5" stop-color="#8400FF"/><stop offset=".9" stop-color="#21A6FF"/></linearGradient></defs></svg>,
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 82 65"><path fill="url(#a)" d="M37.61 1.65a4 4 0 0 1 6.47 0l11.33 15.6a4 4 0 0 0 2.55 1.59l20.42 3.54a4 4 0 0 1 1.98 6.92L67.51 40.84c-3.92 3.52.18 15.17.74 19.57a4 4 0 0 1-5.3 4.27l-20.77-7.34a4 4 0 0 0-2.67 0l-20.76 7.34a4 4 0 0 1-5.3-4.27l2.03-16.1c.68-5.4-10.73-11.94-14.15-15a4 4 0 0 1 1.99-6.93l20.41-3.54a4 4 0 0 0 2.55-1.6L37.61 1.66Z"/><defs><linearGradient id="a" x1="77.91" x2="3.66" y1="62.56" y2="9.01" gradientUnits="userSpaceOnUse"><stop offset=".14" stop-color="#FF9EF0"/><stop offset=".51" stop-color="#8400FF"/><stop offset=".87" stop-color="#21A6FF"/></linearGradient></defs></svg>,
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 75 71"><path fill="url(#a)" d="M33.77 1.8a4 4 0 0 1 6.7 0l8.62 13.18a4 4 0 0 0 3.47 1.8l17.54-.56a4 4 0 0 1 3.27 6.48l-7.9 10.02a4 4 0 0 0 0 4.95l7.9 10.03a4 4 0 0 1-3.27 6.47l-17.54-.56a4 4 0 0 0-3.47 1.8L40.46 68.6a4 4 0 0 1-6.69 0L25.15 55.4a4 4 0 0 0-3.48-1.8l-17.53.56A4 4 0 0 1 .87 47.7l7.9-10.03a4 4 0 0 0 0-4.95L.87 22.7a4 4 0 0 1 3.27-6.48l17.53.57a4 4 0 0 0 3.48-1.81l8.62-13.17Z"/><defs><linearGradient id="a" x1="74.18" x2="-.08" y1="62.06" y2="8.52" gradientUnits="userSpaceOnUse"><stop offset=".14" stop-color="#FF9EF0"/><stop offset=".51" stop-color="#8400FF"/><stop offset=".87" stop-color="#21A6FF"/></linearGradient></defs></svg>
+    ]
+  return (
+    star[type]
+  )
+}
+
+export default StarSvg
